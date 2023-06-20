@@ -1,0 +1,15 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://jordanhammond@localhost:5432/apollo-server-next"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Todo {
+  id        Int      @id @default(autoincrement())
+  text      String
+  completed Boolean  @default(false)
+}
+
